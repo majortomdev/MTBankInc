@@ -2,13 +2,14 @@ package MKBankInc;
 
 public class Checking extends Account{
 
-//    public Checking() {
-//        System.out.println("NEW CHECKING ACCOUNT");
-//    }
+    int debitCardNum;
+    int debitCardPIN;
 
-    public Checking(String st){
-        super(st);
-        System.out.println("NEW CHECKING ACCOUNT");
-//        System.out.println(st+" is the new Checking account owner!");
+    public Checking(String st, String sSn, double initDeposit){
+        super(st, sSn, initDeposit);
+        accNumber = "2"+accNumber;
+    }
+    public void showInfo(){
+        System.out.println("SHOW INFO");
     }
 }

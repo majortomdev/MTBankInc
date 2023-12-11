@@ -1,8 +1,18 @@
 package MKBankInc;
 
 public class Savings extends Account{
-    public Savings(String name){
-        super(name);
-        System.out.println("NEW SAVINGS ACCOUNT");
+
+    int safetyDepositBoxID;
+    int safetyDepositBoxKey;
+
+    public Savings(String name, String sSn, double initDeposit){
+        super(name, sSn, initDeposit);
+        accNumber = "1"+accNumber;
+        setSafetyDepositBox();
+
+    }
+
+    private void setSafetyDepositBox() {
+        
     }
 }
