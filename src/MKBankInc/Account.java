@@ -20,7 +20,7 @@ public abstract class Account implements IBaseRate {
     }
 
     private String setAccountNumber(){
-        String lastTwoOfSSN = sSn.substring(sSn.length()-2,sSn.length());
+        String lastTwoOfSSN = sSn.substring(sSn.length()-2);
         int endTwoDigitsIndex = index%100;
         int randomNumber = (int) (Math.random() *Math.pow(10,4));
         if(endTwoDigitsIndex<10){
