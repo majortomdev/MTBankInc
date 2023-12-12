@@ -10,6 +10,10 @@ public class Checking extends Account{
         accNumber = "2"+accNumber;
         setDebitCard();
     }
+    @Override
+    public void setRate(){
+        rate =getBaseRate() * 0.15;
+    }
 
     private void setDebitCard(){
         debitCardNum = (int)(Math.random() * Math.pow(10,12));
@@ -20,7 +24,8 @@ public class Checking extends Account{
         System.out.println(
                 "Your Checking Account Features:  "+
                         " \n Debit Card Number: "+ debitCardNum+
-                        " \n Debit Card PIN: "+ debitCardPIN
+                        " \n Debit Card PIN: "+ debitCardPIN+
+                        " \n Interest Rate: "+rate+"%"
         );
     }
 }
