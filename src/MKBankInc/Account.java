@@ -32,7 +32,12 @@ public abstract class Account implements IBaseRate {
         }else{
             return lastTwoOfSSN+""+endTwoDigitsIndex+randomNumber;
         }
-
+    }
+    public void compound() {
+        double accruedInterest = balance * (rate/100);
+        balance += accruedInterest;
+        System.out.println("Accrued Interest: $"+accruedInterest);
+        printBalance();
     }
 
     public void deposit(double amount) {
