@@ -9,5 +9,8 @@ public class BankAccountApp {
         chkacc1.showInfo();
         System.out.println("***********************");
         savacc1.showInfo();
+        savacc1.deposit(5500);
+        savacc1.withdraw(480);
+        savacc1.transfer("Insurance",1250);
     }
 }
