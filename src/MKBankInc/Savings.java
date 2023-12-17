@@ -2,8 +2,8 @@ package MKBankInc;
 
 public class Savings extends Account{
 
-    int safetyDepositBoxID;
-    int safetyDepositBoxKey;
+    private int safetyDepositBoxID;
+    private int safetyDepositBoxKey;
 
     public Savings(String name, String sSn, double initDeposit){
         super(name, sSn, initDeposit);
@@ -14,7 +14,7 @@ public class Savings extends Account{
 
     @Override
     public void setRate() {
-        rate = getBaseRate() -.25;
+        rate = getBaseRate() * -.25;
     }
 
     private void setSafetyDepositBox() {

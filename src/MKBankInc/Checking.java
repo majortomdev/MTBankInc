@@ -2,8 +2,8 @@ package MKBankInc;
 
 public class Checking extends Account{
 
-    int debitCardNum;
-    int debitCardPIN;
+    private int debitCardNum;
+    private int debitCardPIN;
 
     public Checking(String st, String sSn, double initDeposit){
         super(st, sSn, initDeposit);

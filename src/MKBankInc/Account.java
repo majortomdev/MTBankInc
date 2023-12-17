@@ -2,12 +2,12 @@ package MKBankInc;
 
 public abstract class Account implements IBaseRate {
 
-    String name;
-    String sSn;
-    double balance;
-    static int index = 10000;
-    String accNumber;
-    double rate;
+    private String name;
+    private String sSn;
+    private double balance;
+    private static int index = 10000;
+    protected String accNumber;
+    protected double rate;
 
 
     public Account(String name, String sSn, double initDeposit) {
