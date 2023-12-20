@@ -5,8 +5,8 @@ public class Checking extends Account{
     private int debitCardNum;
     private int debitCardPIN;
 
-    public Checking(String st, String sSn, double initDeposit){
-        super(st, sSn, initDeposit);
+    public Checking(String st, String mKn, double initDeposit){
+        super(st, mKn, initDeposit);
         accNumber = "2"+accNumber;
         setDebitCard();
     }

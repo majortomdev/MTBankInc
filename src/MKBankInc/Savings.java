@@ -5,8 +5,8 @@ public class Savings extends Account{
     private int safetyDepositBoxID;
     private int safetyDepositBoxKey;
 
-    public Savings(String name, String sSn, double initDeposit){
-        super(name, sSn, initDeposit);
+    public Savings(String name, String mKn, double initDeposit){
+        super(name, mKn, initDeposit);
         accNumber = "1"+accNumber;
         setSafetyDepositBox();
 
