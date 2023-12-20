@@ -16,13 +16,18 @@ public class BankAccountApp {
         List<String[]> newAccountUser = utilities.CSV.read(file);
 
         for(String[] accUser: newAccountUser){
-            System.out.println("NEW ACCOUNT:  ");
-            //System.out.println( );
-            System.out.println("Name: "+accUser[0]);
-            System.out.println("Acc No: "+accUser[1]);
-            System.out.println("Type: "+accUser[2]);
-            System.out.println("Balance: "+accUser[3]);
-            System.out.println("_______________");
+            String name = accUser[0];
+            String mKN = accUser[1];
+            String accType = accUser[2];
+            Double startingDeposit = Double.parseDouble(accUser[3]);
+            System.out.print(name+", "+mKN+", "+accType+", £"+startingDeposit+"  ->  ");
+            if (accType.trim().equals("Savings")){
+                System.out.println("OPEN A SAVINGS ACCOUNT");
+            }else if (accType.trim().equals("Checking")) {
+                System.out.println("OPEN A CHECKING ACCOUNT");
+            }else {
+                System.out.println("ERROR READING ACCOUNT TYPE");
+            }
         }
 
 

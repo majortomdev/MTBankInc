@@ -18,7 +18,6 @@ public class CSV {
                 String[] infoNodes = infoRow.split(",");
                 list.add((infoNodes));
             }
-
         } catch (FileNotFoundException e){
             System.out.println("COULD NOT FIND FILE");
             e.printStackTrace();
@@ -26,8 +25,6 @@ public class CSV {
             System.out.println("COULD NOT READ FILE");
             e.printStackTrace();
         }
-
-
         return list;
     }
 }

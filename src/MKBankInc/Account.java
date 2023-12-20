@@ -3,16 +3,16 @@ package MKBankInc;
 public abstract class Account implements IBaseRate {
 
     private String name;
-    private String sSn;
+    private String mKn;
     private double balance;
     private static int index = 10000;
     protected String accNumber;
     protected double rate;
 
 
-    public Account(String name, String sSn, double initDeposit) {
+    public Account(String name, String mKn, double initDeposit) {
         this.name = name;
-        this.sSn = sSn;
+        this.mKn = mKn;
         balance = initDeposit;
 
         index++;
@@ -24,7 +24,7 @@ public abstract class Account implements IBaseRate {
     public abstract void setRate();
 
     private String setAccountNumber(){
-        String lastTwoOfSSN = sSn.substring(sSn.length()-2);
+        String lastTwoOfSSN = mKn.substring(mKn.length()-2);
         int endTwoDigitsIndex = index%100;
         int randomNumber = (int) (Math.random() *Math.pow(10,4));
         if(endTwoDigitsIndex<10){
@@ -61,6 +61,6 @@ public abstract class Account implements IBaseRate {
 
 
     public void showInfo() {
-        System.out.println("Name: "+name+"\n SSN: "+sSn+"\n Acc No: "+accNumber+"\n Balance: "+balance);
+        System.out.println("Name: "+name+"\n MKN: "+mKn+"\n Acc No: "+accNumber+"\n Balance: "+balance);
     }
 }
